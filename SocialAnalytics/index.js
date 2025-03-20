@@ -22,7 +22,7 @@ app.use((req, res, next) => {
     next();
 });
 
-
+app.use("/", require("./routes"));
 pool.query('SELECT NOW()', (err, res) => {
     if (err) {
         console.error('Database connection failed:', err);
